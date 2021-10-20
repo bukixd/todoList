@@ -7,13 +7,15 @@
     <title>Lista rzeczy do zrobinia</title>
 </head>
 <body>
-
+    <h1>Lista zadan</h1>
+    <h2>Czesc <span id="name"></span>, twoje zadania na dzis:</h2>
     <script>
         //window.localStorage.setItem('name', 'Jakub'); //tak zapisujemy do magazynu
         if(window.localStorage.getItem('name') === null) { //jesli nie ma zapisu o takim kluczu zwraca null
             let name = window.prompt("Podaj imie: "); //wyswietl okienko z zapytaniem
             window.localStorage.setItem('name', name); //zapisz imie do magazynu
         }
+        document.getElementById('name').innerHTML = window.localStorage.getItem('name');
     </script>
 </body>
 </html>
